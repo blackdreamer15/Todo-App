@@ -1,1 +1,2 @@
-const inputField = document.querySelector("form input[type=text]");
+const form = document.querySelector("form");
+
