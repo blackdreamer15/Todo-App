@@ -22,3 +22,12 @@ todoList.addEventListener("click", function removeTodo(e) {
     console.log(document.querySelectorAll('li').outerHTML);
 });
 
+function addTodo(inputContent) {
+    const newTodoItem = document.createElement("li");
+    newTodoItem.innerText = inputContent;
+    todoList.append(newTodoItem);
+    let idCount = todoList.children.length-1;
+    newTodoItem.id =`todo-${idCount}`;
+    console.log(newTodoItem.outerHTML);
+}
+
