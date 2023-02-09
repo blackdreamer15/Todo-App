@@ -16,7 +16,7 @@ todoList.addEventListener("click", function removeTodo(e) {
     //Update id name of todo items
     let count = 0;
     for (const todo of todoList.children) {
-        todo.id = `todo-${count}`;
+        todo.id = `todo-item-${count}`;
         count++;
     }
     console.log(document.querySelectorAll('li').outerHTML);
@@ -27,7 +27,7 @@ function addTodo(inputContent) {
     newTodoItem.innerText = inputContent;
     todoList.append(newTodoItem);
     let idCount = todoList.children.length-1;
-    newTodoItem.id =`todo-${idCount}`;
+    newTodoItem.id =`todo-item-${idCount}`;
     console.log(newTodoItem.outerHTML);
 }
 
