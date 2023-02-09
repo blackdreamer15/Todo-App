@@ -7,7 +7,7 @@ form.addEventListener("submit", (e) => {
     if (inputField.value.length !== 0) {
         addTodo(inputField.value);
     }
-    
+    inputField.value = "";
 });
 
 todoList.addEventListener("click", function removeTodo(e) {
