@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-const inputField = document.querySelector("input");
+const inputField = document.querySelector("input#input-field");
 const todoList = document.querySelector("ul#todo-list");
 
 form.addEventListener("submit", (e) => {
