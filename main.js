@@ -11,6 +11,6 @@ form.addEventListener("submit", (e) => {
 });
 
 
-function addTodo(inputContent) {
+function addTodo(todoContent) {
 
 }
