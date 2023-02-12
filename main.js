@@ -44,18 +44,16 @@ function addTodo(todoValue) {
         alert("Enter a todo item");
     }
 
-    editBtn.addEventListener("click", editBtn);
+    editBtn.addEventListener("click", function editTodo() {
+        if (editBtn.innerText.toLowerCase() === "edit") {
+            editBtn.innerText = "Save";
+            todoInputField.removeAttribute("readonly");
+            todoInputField.focus();
+        }
+        else {
+            editBtn.innerText = "Edit";
+            todoInputField.setAttribute("readonly", "readonly");
+        }
+    });
     
-}
-
-function editTodo() {
-    if (editBtn.innerText.toLowerCase() === "edit") {
-        editBtn.innerText = "Save";
-        todoInputField.removeAttribute("readonly");
-        todoInputField.focus();
-    }
-    else {
-        editBtn.innerText = "Edit";
-        todoInputField.setAttribute("readonly", "readonly");
-    }
 }
