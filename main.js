@@ -61,4 +61,10 @@ function addTodo(todoValue) {
     deleteBtn.addEventListener("click", function deleteTodo(e) {
         e.target.parentElement.parentElement.remove();
     });
+
+    inputCheckbox.addEventListener("click", function isCheckedOrNot() {
+        if (inputCheckbox.checked === true) {
+            
+        }
+    });
 }
