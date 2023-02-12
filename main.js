@@ -44,6 +44,8 @@ function addTodo(todoValue) {
         alert("Enter a todo item");
     }
 
+
+
     editBtn.addEventListener("click", function editTodo() {
         if (editBtn.innerText.toLowerCase() === "edit") {
             editBtn.innerText = "Save";
@@ -55,5 +57,8 @@ function addTodo(todoValue) {
             todoInputField.setAttribute("readonly", "readonly");
         }
     });
-    
+
+    deleteBtn.addEventListener("click", function deleteTodo(e) {
+        e.target.parentElement.parentElement.remove();
+    });
 }
