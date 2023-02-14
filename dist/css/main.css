@@ -42,15 +42,14 @@ body main input, body main button {
   border: none;
   background: none;
 }
-
-form {
+body main form {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 1.5rem;
 }
-form > input {
+body main form > input {
   font-size: 1.1rem;
   margin: 0 1rem;
   margin-left: 0;
@@ -60,7 +59,7 @@ form > input {
   width: 70%;
   color: rgb(255, 255, 255);
 }
-form button[type=submit] {
+body main form button[type=submit] {
   font-size: 1.1rem;
   font-weight: 900;
   cursor: pointer;
@@ -99,7 +98,8 @@ main #todo-list .todo-item .todo-content {
   justify-content: center;
   background-color: #121820;
 }
-main #todo-list .todo-item .todo-content, main #todo-list .todo-item .todo-content input[type=text] {
+main #todo-list .todo-item .todo-content,
+main #todo-list .todo-item .todo-content input[type=text] {
   font-size: 1.1rem;
   border-radius: 0.5rem;
   padding: 0.5rem;

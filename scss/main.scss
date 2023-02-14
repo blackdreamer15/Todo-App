@@ -15,7 +15,7 @@ body {
     font-family: 'Poppins', sans-serif;
     
     
-    & main {
+    main {
         max-width: fit-content;
         background-color: $prim-dark;
         margin: 2rem;
@@ -26,56 +26,56 @@ body {
         align-items: center;
         
         
-        & h1 {
+        h1 {
             margin-top: 1rem;
             margin-bottom: 2rem;
             text-align: center;
         }
 
 
-        & input, & button {
+        input, & button {
             appearance: none;
             outline: none;
             border: none;
             background: none;
         }
+
+        
+        form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem;
+        
+        
+             > input {
+                font-size: 1.1rem;
+                margin: 0 1rem;
+                margin-left: 0;
+                background-color: $prim-darker;
+                border-radius: .5rem;
+                padding: .5rem;
+                width: 70%;
+                color: $prim-white;
+            }
+        
+            button[type="submit"] {
+                font-size: 1.1rem;
+                font-weight: 900;
+                cursor: pointer;
+                width: 30%;
+                background: $prim-blue linear-gradient(to right, $prim-pink, $prim-blue);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+
     }
 }
 
-
-
-
-
-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.5rem;
-
-
-    & > input {
-        font-size: 1.1rem;
-        margin: 0 1rem;
-        margin-left: 0;
-        background-color: $prim-darker;
-        border-radius: .5rem;
-        padding: .5rem;
-        width: 70%;
-        color: $prim-white;
-    }
-
-    & button[type="submit"] {
-        font-size: 1.1rem;
-        font-weight: 900;
-        cursor: pointer;
-        width: 30%;
-        background: $prim-blue linear-gradient(to right, $prim-pink, $prim-blue);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-}
 
 main #todo-list {
     display: flex;
@@ -87,7 +87,7 @@ main #todo-list {
     
     
     
-    & .todo-item {
+    .todo-item {
         font-size: 1.1rem;
         margin-top: 1rem;
         background-color: $prim-darker;
@@ -102,7 +102,7 @@ main #todo-list {
 
 
 
-        & .todo-content {
+        .todo-content {
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -112,21 +112,21 @@ main #todo-list {
         
         
             &,
-            & input[type="text"] {
+            input[type="text"] {
                 font-size: 1.1rem;
                 border-radius: .5rem;
                 padding: .5rem;
                 color: $prim-white;
             }
             
-            & input[type="text"] {
+            input[type="text"] {
                 margin-left: 0;
                 background-color: $prim-dark; 
             }
         
         
         
-            & input[type="checkbox"] {  
+            input[type="checkbox"] {  
                 width: 2rem;
                 height: 2rem;
                 margin-right: .65rem;
@@ -158,7 +158,7 @@ main #todo-list {
 
 
 
-        & .actions button {
+        .actions button {
             font-size: 1.1rem;
             font-weight: 900;
             cursor: pointer;
