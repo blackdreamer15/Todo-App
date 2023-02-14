@@ -4,6 +4,10 @@ const todoList = document.querySelector("div#todo-list");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    if(todoList.childElementCount === 0) {
+        const img = document.createElement("img");
+        img.setAttribute("src", "");
+    }
     addTodo(newTodoInput.value);
 });
 
@@ -64,7 +68,12 @@ function addTodo(todoValue) {
 
     inputCheckbox.addEventListener("click", function isCheckedOrNot() {
         if (inputCheckbox.checked === true) {
-            
+            todoItemContainer.classList.add("completed");
+            todoItemContainer.classList.remove("uncompleted");
+        }
+        else {
+            todoItemContainer.classList.add("uncompleted");
+            todoItemContainer.classList.remove("completed");
         }
     });
 }

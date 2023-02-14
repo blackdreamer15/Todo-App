@@ -15,6 +15,7 @@ body {
     
     main {
         max-width: fit-content;
+        min-width: 600px;
         background-color: $prim-dark;
         margin: 2rem;
         padding: 2rem 2rem 2rem;
@@ -158,5 +159,20 @@ main #todo-list {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+    }
+}
+
+.completed {
+    opacity: .7;
+    background: $checked !important;
+
+    .todo-content .todo-input {
+        text-decoration: line-through;
+    }
+
+    .actions button {
+        background-color: $prim-darker !important;
+        background-image: none !important;
+        opacity: 1 !important;
     }
 }
