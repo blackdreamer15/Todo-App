@@ -150,11 +150,11 @@ main #todo-list .todo-item .actions button {
 }
 
 .completed {
-  opacity: 0.5;
   background: rgb(8, 202, 8) !important;
 }
 .completed .todo-content .todo-input {
   text-decoration: line-through;
+  opacity: 0.5;
 }
 .completed .actions button {
   background-color: #121820 !important;

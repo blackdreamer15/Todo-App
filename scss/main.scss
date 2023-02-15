@@ -163,11 +163,12 @@ main #todo-list {
 }
 
 .completed {
-    opacity: .5;
+    // opacity: .5;
     background: $checked !important;
 
     .todo-content .todo-input {
         text-decoration: line-through;
+        opacity: .5;
     }
 
     .actions button {
