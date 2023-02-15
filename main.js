@@ -85,7 +85,6 @@ function addTodo(todoValue) {
 
 function filterTodo(e) {
     todoList.childNodes.forEach((todo) => {
-        console.log(e.target.value);
         switch (e.target.value) {
             case "all":
                 todo.style.display = "flex";
