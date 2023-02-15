@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     @include flexCenter();
 
-    background-color: $prim-blue;
+    background: linear-gradient(to right, $prim-pink, $prim-blue);
     color: $prim-white;
     font-family: 'Poppins', sans-serif;
     
@@ -43,28 +43,38 @@ body {
             @include flexCenter();
             flex-direction: row;
             margin-top: 1.5rem;
+            min-width: 100%;
         
-        
-             > input {
+            & > input {
                 font-size: 1.1rem;
                 margin: 0 1rem;
                 margin-left: 0;
                 background-color: $prim-darker;
                 border-radius: .5rem;
                 padding: .5rem;
-                width: 70%;
+                width: 60%;
                 color: $prim-white;
             }
         
-            button[type="submit"] {
-                font-size: 1.1rem;
+            & button[type="submit"] {
+                font-size: 2rem;
                 font-weight: 900;
+                color: $prim-darker;
+                width: 50px;
+                height: 50%;
                 cursor: pointer;
-                width: 30%;
-                background: $prim-blue linear-gradient(to right, $prim-pink, $prim-blue);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                border: 2px solid transparent;
+                border-radius: 100%;
+                background: linear-gradient(to right, $prim-pink, $prim-blue);
+                transition: .5s all ease-in-out;
+
+                &:hover {
+                    background: linear-gradient(to right, $prim-pink, $prim-blue);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    border-color: $prim-pink;
+                }
             }
         }
 

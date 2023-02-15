@@ -18,7 +18,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: rgb(139, 86, 252);
+  background: linear-gradient(to right, rgb(236, 72, 153), rgb(139, 86, 252));
   color: rgb(255, 255, 255);
   font-family: "Poppins", sans-serif;
 }
@@ -53,6 +53,7 @@ body main form {
   justify-content: center;
   flex-direction: row;
   margin-top: 1.5rem;
+  min-width: 100%;
 }
 body main form > input {
   font-size: 1.1rem;
@@ -61,18 +62,27 @@ body main form > input {
   background-color: #121820;
   border-radius: 0.5rem;
   padding: 0.5rem;
-  width: 70%;
+  width: 60%;
   color: rgb(255, 255, 255);
 }
 body main form button[type=submit] {
-  font-size: 1.1rem;
+  font-size: 2rem;
   font-weight: 900;
+  color: #121820;
+  width: 50px;
+  height: 50%;
   cursor: pointer;
-  width: 30%;
-  background: rgb(139, 86, 252) linear-gradient(to right, rgb(236, 72, 153), rgb(139, 86, 252));
+  border: 2px solid transparent;
+  border-radius: 100%;
+  background: linear-gradient(to right, rgb(236, 72, 153), rgb(139, 86, 252));
+  transition: 0.5s all ease-in-out;
+}
+body main form button[type=submit]:hover {
+  background: linear-gradient(to right, rgb(236, 72, 153), rgb(139, 86, 252));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  border-color: rgb(236, 72, 153);
 }
 
 main #todo-list {
