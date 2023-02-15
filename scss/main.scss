@@ -31,7 +31,7 @@ body {
         }
 
 
-        input, & button {
+        input, button, select {
             appearance: none;
             outline: none;
             border: none;
@@ -71,6 +71,17 @@ body {
                     border-color: $prim-pink;
                 }
             }
+
+
+            select {
+                cursor: pointer;
+                color: $prim-pink;
+                background-color: $prim-darker;
+                width: 10rem;
+                height: 3.2rem;
+                padding: 1rem;
+            }
+
         }
 
 

@@ -1,6 +1,8 @@
 const form = document.querySelector("form");
 const newTodoInput = document.querySelector("input#new-todo-input");
 const todoList = document.querySelector("div#todo-list");
+const selectElement = document.querySelector("select#select-opt");
+
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -74,6 +76,38 @@ function addTodo(todoValue) {
         else {
             todoItemContainer.classList.add("uncompleted");
             todoItemContainer.classList.remove("completed");
+        }
+    });
+
+
+    selectElement.addEventListener("change", filterTodo);
+}
+
+function filterTodo(e) {
+    todoList.childNodes.forEach((todo) => {
+        console.log(e.target.value);
+        switch (e.target.value) {
+            case "all":
+                todo.style.display = "flex";
+                break;
+
+            case "completed":
+                if (todo.classList.contains("completed")) {
+                    todo.style.display = "flex";
+                }
+                else {
+                    todo.style.display = "none";
+                }
+                break;
+
+            case "uncompleted":
+                if (todo.classList.contains("uncompleted")) {
+                    todo.style.display = "flex";
+                }
+                else {
+                    todo.style.display = "none";
+                }
+                break;
         }
     });
 }

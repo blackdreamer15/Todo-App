@@ -40,7 +40,7 @@ body main h1 {
   margin-bottom: 2rem;
   text-align: center;
 }
-body main input, body main button {
+body main input, body main button, body main select {
   appearance: none;
   outline: none;
   border: none;
@@ -78,6 +78,14 @@ body main form button[type=submit] {
 }
 body main form button[type=submit]:hover {
   border-color: rgb(236, 72, 153);
+}
+body main form select {
+  cursor: pointer;
+  color: rgb(236, 72, 153);
+  background-color: #121820;
+  width: 10rem;
+  height: 3.2rem;
+  padding: 1rem;
 }
 
 main #todo-list {
