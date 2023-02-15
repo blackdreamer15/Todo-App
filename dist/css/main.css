@@ -68,20 +68,15 @@ body main form > input {
 body main form button[type=submit] {
   font-size: 2rem;
   font-weight: 900;
-  color: #121820;
   width: 50px;
   height: 50%;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 3px solid #121820;
+  color: rgb(236, 72, 153);
   border-radius: 100%;
-  background: linear-gradient(to right, rgb(236, 72, 153), rgb(139, 86, 252));
   transition: 0.5s all ease-in-out;
 }
 body main form button[type=submit]:hover {
-  background: linear-gradient(to right, rgb(236, 72, 153), rgb(139, 86, 252));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   border-color: rgb(236, 72, 153);
 }
 

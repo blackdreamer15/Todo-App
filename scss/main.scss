@@ -59,20 +59,15 @@ body {
             & button[type="submit"] {
                 font-size: 2rem;
                 font-weight: 900;
-                color: $prim-darker;
                 width: 50px;
                 height: 50%;
                 cursor: pointer;
-                border: 2px solid transparent;
+                border: 3px solid $prim-darker;
+                color: $prim-pink;
                 border-radius: 100%;
-                background: linear-gradient(to right, $prim-pink, $prim-blue);
                 transition: .5s all ease-in-out;
 
                 &:hover {
-                    background: linear-gradient(to right, $prim-pink, $prim-blue);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
                     border-color: $prim-pink;
                 }
             }
