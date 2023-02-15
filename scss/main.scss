@@ -164,7 +164,7 @@ main #todo-list {
 
 .completed {
     // opacity: .5;
-    background: $checked !important;
+    background: $prim-pink !important;
 
     .todo-content .todo-input {
         text-decoration: line-through;
