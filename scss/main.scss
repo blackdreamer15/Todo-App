@@ -163,7 +163,7 @@ main #todo-list {
 }
 
 .completed {
-    opacity: .7;
+    opacity: .5;
     background: $checked !important;
 
     .todo-content .todo-input {
@@ -173,6 +173,5 @@ main #todo-list {
     .actions button {
         background-color: $prim-darker !important;
         background-image: none !important;
-        opacity: 1 !important;
     }
 }
