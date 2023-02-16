@@ -188,4 +188,13 @@ main #todo-list .todo-item .actions button {
 .completed .actions button {
   background-color: #121820 !important;
   background-image: none !important;
+}
+
+@media (max-width: 678px) {
+  body main {
+    min-width: 100%;
+    padding: 2rem 2rem 2rem;
+    margin: 0;
+    border-radius: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
