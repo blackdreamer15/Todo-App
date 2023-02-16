@@ -7,13 +7,13 @@ body {
     min-height: 100vh;
     flex-direction: column;
     @include flexCenter();
-
-    background: linear-gradient(to right, $prim-pink, $prim-blue);
     color: $prim-white;
+    background: #992677;
     font-family: 'Poppins', sans-serif;
     
     
     main {
+        max-height: auto;
         max-width: fit-content;
         min-width: 600px;
         background-color: $prim-dark;
@@ -218,6 +218,20 @@ main #todo-list {
             padding: 2rem 2rem 2rem;
             margin: 0;
             border-radius: 0;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    body {
+        main {
+            margin: 0;
+            padding: 0;
+
+            #todo-list {
+                width: fit-content;
+                flex-direction: column;
+            }
         }
     }
 }

@@ -18,11 +18,12 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, rgb(236, 72, 153), rgb(139, 86, 252));
   color: rgb(255, 255, 255);
+  background: #992677;
   font-family: "Poppins", sans-serif;
 }
 body main {
+  max-height: auto;
   max-width: fit-content;
   min-width: 600px;
   background-color: #1F2937;
@@ -196,5 +197,15 @@ main #todo-list .todo-item .actions button {
     padding: 2rem 2rem 2rem;
     margin: 0;
     border-radius: 0;
+  }
+}
+@media (max-width: 520px) {
+  body main {
+    margin: 0;
+    padding: 0;
+  }
+  body main #todo-list {
+    width: fit-content;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=main.css.map */
