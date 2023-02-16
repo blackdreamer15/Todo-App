@@ -52,6 +52,7 @@ body main form {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-top: 1.5rem;
   min-width: 100%;
 }
@@ -79,13 +80,28 @@ body main form button[type=submit] {
 body main form button[type=submit]:hover {
   border-color: rgb(236, 72, 153);
 }
-body main form select {
+body main form #select-opt {
   cursor: pointer;
   color: rgb(236, 72, 153);
   background-color: #121820;
-  width: 10rem;
-  height: 3.2rem;
-  padding: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.8rem;
+  margin-left: 0.5rem;
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+body main form #select-opt * {
+  padding: auto;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  background-color: rgb(139, 86, 252);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 main #todo-list {
