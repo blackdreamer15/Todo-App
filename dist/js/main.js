@@ -41,6 +41,11 @@ function addTodo(todoValue) {
     todoActionsContainer.append(editBtn, deleteBtn);
     todoItemContainer.append(todoContentContainer, todoActionsContainer);
 
+    if(todoList.childElementCount === 0) {
+        const checklistImg = document.createElement("img");
+        checklistImg.src = "../";
+    }
+
     if (todoValue.trim().length !== 0) {
         todoList.append(todoItemContainer);
         todoInputField.value = todoValue;
@@ -82,6 +87,9 @@ function addTodo(todoValue) {
 
     selectElement.addEventListener("change", filterTodo);
 }
+
+
+
 
 function filterTodo(e) {
     todoList.childNodes.forEach((todo) => {
