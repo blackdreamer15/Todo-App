@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     @include flexCenter();
     color: $prim-white;
-    background: #992677;
+    background: linear-gradient(to right, $prim-blue, $prim-purple);
     font-family: 'Poppins', sans-serif;
     
     
@@ -63,21 +63,25 @@ body {
                 width: 50px;
                 height: 50%;
                 cursor: pointer;
-                border: 3px solid $prim-darker;
-                color: $prim-pink;
+                border: 3px solid $prim-purple;
+                background-color: $prim-darker;
+                color: $prim-blue;
                 border-radius: 100%;
-                transition: .5s all ease-in-out;
+                transition: .2s all ease-in-out;
 
                 &:hover {
-                    border-color: $prim-pink;
+                    border-color: $prim-darker;
+                    background-color: $prim-blue;
+                    color: $prim-darker;
                 }
             }
 
 
             & #select-opt {
                 cursor: pointer;
-                color: $prim-pink;
-                background-color: $prim-darker;
+                color: $prim-darker;
+                background: $prim-purple;
+
                 width: -moz-fit-content;
                 width: fit-content;
                 height: fit-content;
@@ -85,8 +89,8 @@ body {
                 margin-left: .5rem;
                 border-radius: 2rem;
                 text-align: center;
-                font-size: .9rem;
-                font-weight: 700;
+                font-size: .8rem;
+                font-weight: 900;
 
                 * {
                     padding: auto;
@@ -113,7 +117,28 @@ main #todo-list {
     max-width: 100%;
     
     
+    div#placeholder {
+        @include flexCenter();
+        flex-direction: column;
+        width: 60%;
+        text-align: center;
+        margin: 2rem auto;
+        display: none;
+        
+        img {
+            height: 100px;
+            width: 100px;
+        }
+
+        h2 {
+            color: #ffffff6b;
+            margin-top: 1.7rem;
+            font-size: 1rem;
+        }
+    }
     
+
+
     .todo-item {
         font-size: 1.1rem;
         margin-top: 1rem;
@@ -126,18 +151,14 @@ main #todo-list {
         @include flexCenter();
         
 
-
-
         .todo-content {
             @include flexCenter();
             flex-direction: row;
             background-color: $prim-darker;
-            
-        
         
             &,
             input[type="text"] {
-                font-size: 1.1rem;
+                font-size: 1rem;
                 border-radius: .5rem;
                 padding: .5rem;
                 color: $prim-white;
@@ -148,16 +169,14 @@ main #todo-list {
                 background-color: $prim-dark; 
             }
         
-        
-        
+            
             input[type="checkbox"] {  
-                width: 2rem;
-                height: 2rem;
-                margin-right: .65rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-right: .5rem;
                 border: .2rem solid $prim-dark;
                 border-radius: .5rem;
                 cursor: pointer;
-            
             
             
                 &:checked {
@@ -167,7 +186,7 @@ main #todo-list {
                 &:not(:checked):before,
                 &:checked::after {
                     content: "\2714";
-                    font-size: 1.8rem;
+                    font-size: 1.2rem;
                     position: relative;
                     bottom: .38rem;
                     left: .1rem;
@@ -182,26 +201,32 @@ main #todo-list {
 
 
 
-        .actions button {
-            font-size: 1.1rem;
-            font-weight: 900;
-            cursor: pointer;
-            margin: 0 .5rem;
-            background: $prim-blue linear-gradient(to right, $prim-pink, $prim-blue);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .actions {
+            margin: 0 .5rem 0 1rem;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: .5rem;
+
+
+            button {
+                font-size: 1rem;
+                font-weight: 900;
+                cursor: pointer;
+                background: linear-gradient(to right, $prim-blue, $prim-purple);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
     }
 }
 
 .completed {
-    // opacity: .5;
-    background: $prim-pink !important;
+    opacity: .7;
+    background: $prim-blue !important;
 
     .todo-content .todo-input {
         text-decoration: line-through;
-        opacity: .5;
     }
 
     .actions button {

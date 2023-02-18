@@ -19,7 +19,7 @@ body {
   align-items: center;
   justify-content: center;
   color: rgb(255, 255, 255);
-  background: #992677;
+  background: linear-gradient(to right, rgb(61, 180, 236), rgb(139, 86, 252));
   font-family: "Poppins", sans-serif;
 }
 body main {
@@ -73,18 +73,21 @@ body main form button[type=submit] {
   width: 50px;
   height: 50%;
   cursor: pointer;
-  border: 3px solid #121820;
-  color: rgb(236, 72, 153);
+  border: 3px solid rgb(139, 86, 252);
+  background-color: #121820;
+  color: rgb(61, 180, 236);
   border-radius: 100%;
-  transition: 0.5s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 body main form button[type=submit]:hover {
-  border-color: rgb(236, 72, 153);
+  border-color: #121820;
+  background-color: rgb(61, 180, 236);
+  color: #121820;
 }
 body main form #select-opt {
   cursor: pointer;
-  color: rgb(236, 72, 153);
-  background-color: #121820;
+  color: #121820;
+  background: rgb(139, 86, 252);
   width: -moz-fit-content;
   width: fit-content;
   height: fit-content;
@@ -92,15 +95,15 @@ body main form #select-opt {
   margin-left: 0.5rem;
   border-radius: 2rem;
   text-align: center;
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 900;
 }
 body main form #select-opt * {
   padding: auto;
   margin: auto;
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
-  background-color: rgb(139, 86, 252);
+  background-color: rgb(61, 180, 236);
   color: rgb(255, 255, 255);
   cursor: pointer;
 }
@@ -113,6 +116,26 @@ main #todo-list {
   flex-direction: column;
   margin-top: 1.5rem;
   max-width: 100%;
+}
+main #todo-list div#placeholder {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  text-align: center;
+  margin: 2rem auto;
+  display: none;
+}
+main #todo-list div#placeholder img {
+  height: 100px;
+  width: 100px;
+}
+main #todo-list div#placeholder h2 {
+  color: rgba(255, 255, 255, 0.4196078431);
+  margin-top: 1.7rem;
+  font-size: 1rem;
 }
 main #todo-list .todo-item {
   font-size: 1.1rem;
@@ -138,7 +161,7 @@ main #todo-list .todo-item .todo-content {
 }
 main #todo-list .todo-item .todo-content,
 main #todo-list .todo-item .todo-content input[type=text] {
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-radius: 0.5rem;
   padding: 0.5rem;
   color: rgb(255, 255, 255);
@@ -148,9 +171,9 @@ main #todo-list .todo-item .todo-content input[type=text] {
   background-color: #1F2937;
 }
 main #todo-list .todo-item .todo-content input[type=checkbox] {
-  width: 2rem;
-  height: 2rem;
-  margin-right: 0.65rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
   border: 0.2rem solid #1F2937;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -160,7 +183,7 @@ main #todo-list .todo-item .todo-content input[type=checkbox]:checked {
 }
 main #todo-list .todo-item .todo-content input[type=checkbox]:not(:checked):before, main #todo-list .todo-item .todo-content input[type=checkbox]:checked::after {
   content: "✔";
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   position: relative;
   bottom: 0.38rem;
   left: 0.1rem;
@@ -168,23 +191,28 @@ main #todo-list .todo-item .todo-content input[type=checkbox]:not(:checked):befo
 main #todo-list .todo-item .todo-content input[type=checkbox]:not(:checked):before {
   color: transparent;
 }
+main #todo-list .todo-item .actions {
+  margin: 0 0.5rem 0 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 0.5rem;
+}
 main #todo-list .todo-item .actions button {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 900;
   cursor: pointer;
-  margin: 0 0.5rem;
-  background: rgb(139, 86, 252) linear-gradient(to right, rgb(236, 72, 153), rgb(139, 86, 252));
+  background: linear-gradient(to right, rgb(61, 180, 236), rgb(139, 86, 252));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .completed {
-  background: rgb(236, 72, 153) !important;
+  opacity: 0.7;
+  background: rgb(61, 180, 236) !important;
 }
 .completed .todo-content .todo-input {
   text-decoration: line-through;
-  opacity: 0.5;
 }
 .completed .actions button {
   background-color: #121820 !important;
