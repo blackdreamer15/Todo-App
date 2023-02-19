@@ -70,7 +70,7 @@ function addTodo(todoValue) {
         }
         else {
             todoItemContainer.classList.remove("completed");
-            todoItemContainer.classList.remove("uncompleted");
+            todoItemContainer.classList.add("uncompleted");
         }
     });
 
