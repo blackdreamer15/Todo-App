@@ -107,17 +107,7 @@ body main form #select-opt * {
   color: rgb(255, 255, 255);
   cursor: pointer;
 }
-
-main #todo-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 1.5rem;
-  max-width: 100%;
-}
-main #todo-list div#placeholder {
+body main div#placeholder {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -128,14 +118,24 @@ main #todo-list div#placeholder {
   margin: 2rem auto;
   display: none;
 }
-main #todo-list div#placeholder img {
+body main div#placeholder img {
   height: 100px;
   width: 100px;
 }
-main #todo-list div#placeholder h2 {
+body main div#placeholder h2 {
   color: rgba(255, 255, 255, 0.4196078431);
   margin-top: 1.7rem;
   font-size: 1rem;
+}
+
+main #todo-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  max-width: 100%;
 }
 main #todo-list .todo-item {
   font-size: 1.1rem;

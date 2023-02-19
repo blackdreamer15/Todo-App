@@ -105,6 +105,27 @@ body {
 
         }
 
+
+        div#placeholder {
+            @include flexCenter();
+            flex-direction: column;
+            width: 60%;
+            text-align: center;
+            margin: 2rem auto;
+            display: none;
+            
+            img {
+                height: 100px;
+                width: 100px;
+            }
+        
+            h2 {
+                color: #ffffff6b;
+                margin-top: 1.7rem;
+                font-size: 1rem;
+            }
+        }
+
     }
 }
 
@@ -116,28 +137,6 @@ main #todo-list {
     margin-top: 1.5rem;
     max-width: 100%;
     
-    
-    div#placeholder {
-        @include flexCenter();
-        flex-direction: column;
-        width: 60%;
-        text-align: center;
-        margin: 2rem auto;
-        display: none;
-        
-        img {
-            height: 100px;
-            width: 100px;
-        }
-
-        h2 {
-            color: #ffffff6b;
-            margin-top: 1.7rem;
-            font-size: 1rem;
-        }
-    }
-    
-
 
     .todo-item {
         font-size: 1.1rem;

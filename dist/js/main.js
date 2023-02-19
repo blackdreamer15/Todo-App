@@ -3,16 +3,10 @@ const newTodoInput = document.querySelector("input#new-todo-input");
 const todoList = document.querySelector("div#todo-list");
 const selectElement = document.querySelector("select#select-opt");
 
-
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if(todoList.childElementCount === 0) {
-        const img = document.createElement("img");
-        img.setAttribute("src", "");
-    }
     addTodo(newTodoInput.value);
 });
-
 
 function addTodo(todoValue) {
     const todoItemContainer = document.createElement("div");
@@ -23,7 +17,7 @@ function addTodo(todoValue) {
     const editBtn = document.createElement("button");
     const deleteBtn = document.createElement("button");
 
-    todoItemContainer.classList.add("todo-item");
+    todoItemContainer.classList.add("todo-item", "uncompleted");
     todoContentContainer.classList.add("todo-content");
     todoActionsContainer.classList.add("actions");
     editBtn.classList.add("edit");
@@ -34,17 +28,13 @@ function addTodo(todoValue) {
     todoInputField.setAttribute("type", "text");
     todoInputField.setAttribute("readonly", "readonly");
 
-    editBtn.innerText = "Edit";
-    deleteBtn.innerText = "Delete";
+    editBtn.innerText = "EDIT";
+    deleteBtn.innerText = "DEL";
 
     todoContentContainer.append(inputCheckbox, todoInputField);
     todoActionsContainer.append(editBtn, deleteBtn);
     todoItemContainer.append(todoContentContainer, todoActionsContainer);
 
-    if(todoList.childElementCount === 0) {
-        const checklistImg = document.createElement("img");
-        checklistImg.src = "../";
-    }
 
     if (todoValue.trim().length !== 0) {
         todoList.append(todoItemContainer);
@@ -59,12 +49,12 @@ function addTodo(todoValue) {
 
     editBtn.addEventListener("click", function editTodo() {
         if (editBtn.innerText.toLowerCase() === "edit") {
-            editBtn.innerText = "Save";
+            editBtn.innerText = "SAVE";
             todoInputField.removeAttribute("readonly");
             todoInputField.focus();
         }
         else {
-            editBtn.innerText = "Edit";
+            editBtn.innerText = "EDIT";
             todoInputField.setAttribute("readonly", "readonly");
         }
     });
@@ -79,16 +69,14 @@ function addTodo(todoValue) {
             todoItemContainer.classList.remove("uncompleted");
         }
         else {
-            todoItemContainer.classList.add("uncompleted");
             todoItemContainer.classList.remove("completed");
+            todoItemContainer.classList.remove("uncompleted");
         }
     });
 
 
     selectElement.addEventListener("change", filterTodo);
 }
-
-
 
 
 function filterTodo(e) {
