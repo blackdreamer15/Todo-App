@@ -16,7 +16,7 @@ body {
         max-height: auto;
         max-width: fit-content;
         min-width: 600px;
-        background-color: $prim-dark;
+        background-color: rgb(33, 62, 99);
         margin: 2rem;
         padding: 2rem 2rem 2rem;
         border-radius: .75rem;
@@ -224,8 +224,16 @@ main #todo-list {
     opacity: .7;
     background: $prim-blue !important;
 
-    .todo-content .todo-input {
-        text-decoration: line-through;
+    .todo-content {
+        background-color: $prim-blue !important;
+
+        .todo-input {
+            text-decoration: line-through;
+        }
+
+        input[type="checkbox"] {   
+            background-color: $prim-darker;      
+        }
     }
 
     .actions button {
@@ -255,6 +263,23 @@ main #todo-list {
             #todo-list {
                 width: fit-content;
                 flex-direction: column;
+                padding-left: 0;
+                padding-right: 0;
+                margin-bottom: 2rem;
+
+                .todo-item {
+                    border-radius: 0;
+                    .todo-content {
+                        padding: 0;
+                        margin: 0;
+                        min-width: 100%;
+                        
+                        input[type="text"] {
+                            width: 90%;
+                            background-color: $prim-dark;
+                        }
+                    }
+                }
             }
         }
     }

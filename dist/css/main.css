@@ -26,7 +26,7 @@ body main {
   max-height: auto;
   max-width: fit-content;
   min-width: 600px;
-  background-color: #1F2937;
+  background-color: rgb(33, 62, 99);
   margin: 2rem;
   padding: 2rem 2rem 2rem;
   border-radius: 0.75rem;
@@ -61,7 +61,7 @@ body main form > input {
   font-size: 1.1rem;
   margin: 0 1rem;
   margin-left: 0;
-  background-color: #121820;
+  background-color: #061d3f;
   border-radius: 0.5rem;
   padding: 0.5rem;
   width: 60%;
@@ -74,19 +74,19 @@ body main form button[type=submit] {
   height: 50%;
   cursor: pointer;
   border: 3px solid rgb(139, 86, 252);
-  background-color: #121820;
+  background-color: #061d3f;
   color: rgb(61, 180, 236);
   border-radius: 100%;
   transition: 0.2s all ease-in-out;
 }
 body main form button[type=submit]:hover {
-  border-color: #121820;
+  border-color: #061d3f;
   background-color: rgb(61, 180, 236);
-  color: #121820;
+  color: #061d3f;
 }
 body main form #select-opt {
   cursor: pointer;
-  color: #121820;
+  color: #061d3f;
   background: rgb(139, 86, 252);
   width: -moz-fit-content;
   width: fit-content;
@@ -140,7 +140,7 @@ main #todo-list {
 main #todo-list .todo-item {
   font-size: 1.1rem;
   margin-top: 1rem;
-  background-color: #121820;
+  background-color: #061d3f;
   border-radius: 0.5rem;
   padding: 0.5rem;
   color: rgb(255, 255, 255);
@@ -157,7 +157,7 @@ main #todo-list .todo-item .todo-content {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  background-color: #121820;
+  background-color: #061d3f;
 }
 main #todo-list .todo-item .todo-content,
 main #todo-list .todo-item .todo-content input[type=text] {
@@ -211,11 +211,17 @@ main #todo-list .todo-item .actions button {
   opacity: 0.7;
   background: rgb(61, 180, 236) !important;
 }
+.completed .todo-content {
+  background-color: rgb(61, 180, 236) !important;
+}
 .completed .todo-content .todo-input {
   text-decoration: line-through;
 }
+.completed .todo-content input[type=checkbox] {
+  background-color: #061d3f;
+}
 .completed .actions button {
-  background-color: #121820 !important;
+  background-color: #061d3f !important;
   background-image: none !important;
 }
 
@@ -235,5 +241,20 @@ main #todo-list .todo-item .actions button {
   body main #todo-list {
     width: fit-content;
     flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  body main #todo-list .todo-item {
+    border-radius: 0;
+  }
+  body main #todo-list .todo-item .todo-content {
+    padding: 0;
+    margin: 0;
+    min-width: 100%;
+  }
+  body main #todo-list .todo-item .todo-content input[type=text] {
+    width: 90%;
+    background-color: #1F2937;
   }
 }/*# sourceMappingURL=main.css.map */
