@@ -3,9 +3,15 @@ const newTodoInput = document.querySelector("input#new-todo-input");
 const todoList = document.querySelector("div#todo-list");
 const selectElement = document.querySelector("select#select-opt");
 
+window.addEventListener("DOMContentLoaded", () => {
+    isTodoEmpty(todoList);
+});
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    isTodoEmpty(todoList);
     addTodo(newTodoInput.value);
+    isTodoEmpty(todoList);
 });
 
 function addTodo(todoValue) {
@@ -61,6 +67,7 @@ function addTodo(todoValue) {
 
     deleteBtn.addEventListener("click", function deleteTodo(e) {
         e.target.parentElement.parentElement.remove();
+        isTodoEmpty(todoList);
     });
 
     inputCheckbox.addEventListener("click", function isCheckedOrNot() {
@@ -105,4 +112,14 @@ function filterTodo(e) {
                 break;
         }
     });
+}
+
+
+function isTodoEmpty(todoList) {
+    if (todoList.childElementCount === 0) {
+        document.querySelector("div#placeholder").style.display = "flex";
+    }
+    else {
+        document.querySelector("div#placeholder").style.display = "none";
+    }
 }
