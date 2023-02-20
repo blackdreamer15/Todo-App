@@ -71,7 +71,7 @@ body main form button[type=submit] {
   font-size: 2rem;
   font-weight: 900;
   width: 50px;
-  height: 50%;
+  height: auto;
   cursor: pointer;
   border: 3px solid rgb(139, 86, 252);
   background-color: #061d3f;
