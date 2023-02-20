@@ -1,7 +1,7 @@
-@import "./resets";
-@import "./variables";
-@import "./fonts";
-@import "./mixins";
+@import "./partials/fonts";
+@import "./partials/mixins";
+@import "./partials/resets";
+@import "./partials/variables";
 
 body {
     min-height: 100vh;
